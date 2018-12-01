@@ -8,11 +8,18 @@ import { SpinnerService } from '../../services/spinner.service';
 })
 export class Page2Component implements OnInit {
 
+	spinnerState;
+
 	constructor(private spinnerService: SpinnerService) {
 
 	}	
 
   ngOnInit() {
+  	this.spinnerService.update.subscribe(
+  		next => {
+  			this.spinnerState = next;
+  		}
+  	);
   }
 
   spinnerStart() {
