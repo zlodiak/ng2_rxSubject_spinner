@@ -5,3 +5,9 @@
 </nav>
 
 <router-outlet></router-outlet>
+
+-{{ spinnerService.update|async }}-
+
+<div class="spinner-content" *ngIf="spinnerService.update|async">
+  <img src="assets/img/spinner.svg">
+</div>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { Page1Component } from './pages/page1/page1.component';
 import { Page2Component } from './pages/page2/page2.component';
 import { Page3Component } from './pages/page3/page3.component';
+import { SpinnerService } from './services/spinner.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { Page3Component } from './pages/page3/page3.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SpinnerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
